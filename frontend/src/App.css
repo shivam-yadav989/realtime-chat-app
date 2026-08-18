@@ -36,3 +36,41 @@
     transform: rotate(360deg);
   }
 }
+
+/* --- Mobile Responsive Media Query --- */
+@media screen and (max-width: 768px) {
+  .App {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Main container ko mobile friendly banane ke liye */
+  div[style*="max-width: 1100px"], 
+  div[style*="width: 90%"] {
+    width: 100% !important;
+    height: 100vh !important;
+    max-width: 100% !important;
+    border-radius: 0 !important;
+    border: none !important;
+    margin: 0 !important;
+  }
+
+  /* Flex container ko column me badalne ke liye */
+  div[style*="display: flex"][style*="background-color: #0f172a"] {
+    flex-direction: column !important;
+  }
+
+  /* Sidebar mobile par full width aur height adjust karne ke liye */
+  div[style*="width: 320px"] {
+    width: 100% !important;
+    height: 40vh !important;
+    border-right: none !important;
+    border-bottom: 1px solid #1e293b !important;
+  }
+
+  /* Chat area mobile par bacha hua space lega */
+  div[style*="flex: 1"][style*="display: flex"][style*="flex-direction: column"] {
+    height: 60vh !important;
+    width: 100% !important;
+  }
+}
